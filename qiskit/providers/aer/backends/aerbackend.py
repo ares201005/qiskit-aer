@@ -126,6 +126,7 @@ class AerBackend(BaseBackend):
 
     def _run_job(self, job_id, qobj, backend_options, noise_model, validate):
         """Run a qobj job"""
+        print("test-ZY from qiskit-aer/qiskit/providers/aer/backends/aerbackend.py")
         start = time.time()
         if validate:
             validate_qobj_against_schema(qobj)
