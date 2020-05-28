@@ -14,7 +14,7 @@ from qiskit import execute
 from qiskit import QuantumCircuit
 from qiskit import QuantumRegister
 
-from qiskit.providers.aer.pulse.duffing_model_generators import duffing_system_model
+from qiskit.providers.aer.pulse.system_models.duffing_model_generators import duffing_system_model
 from qiskit.pulse import Schedule, Play, Acquire, Gaussian, DriveChannel, AcquireChannel, MemorySlot
 
 from qiskit.providers.aer import QasmSimulator
@@ -435,7 +435,7 @@ def model_and_pi_schedule():
 
 if __name__ == '__main__':
     # Run qasm simulator
-    shots = 2000
+    shots = 4000
     circuits = grovers_circuit(final_measure=True, allow_sampling=True)
     targets = [{'0x0': 5 * shots / 8, '0x1': shots / 8,
                 '0x2': shots / 8, '0x3': shots / 8}]
